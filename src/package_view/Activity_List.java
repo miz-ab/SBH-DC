@@ -112,24 +112,7 @@ public class Activity_List extends javax.swing.JFrame {
     }
 
     private void refreshTable() {
-//        ArrayList<Model_Show_Basic_info> data = refreshRecord();
-//        String col[] = {"#", "ID", "Current User", "Recived From", "Deliverd To", "Shift", "Date"};
-//        DefaultTableModel tmodel = new DefaultTableModel(col, 0);
-//        //Jtable_basic_info.setModel(tmodel);
-//        
-//        int counter = 1;
-//        ArrayList<Model_Show_Basic_info> data = refreshRecord();
-//        
-//        for(int i = 0; i < data.size(); i++){
-//            Object[] tdata = {counter, data.get(i).getRegID()};
-//            tmodel.addRow(tdata);
-//            counter = counter + 1;
-//        }
-//        
-//        Jtable_basic_info.setModel(tmodel);
-        
-        
-        //System.out.println("referesh Table called");
+
         defaultTableModel.getDataVector().clear();
 
         ArrayList<Model_Show_Basic_info> data = refreshRecord();
@@ -146,8 +129,7 @@ public class Activity_List extends javax.swing.JFrame {
     }
 
     private ArrayList<Model_Show_Basic_info> refreshRecord() {
-        //System.out.println("refreshrecored called ...");
-        //System.out.println("ac list db basic data list size " + db_manager.basic_data_to_display().size());
+
         return db_manager.basic_data_to_display();
     }
 
@@ -281,8 +263,7 @@ public class Activity_List extends javax.swing.JFrame {
         list_show_q9 = db_manager.get_data_Table_5(reg_id);
         list_show_q10 = db_manager.get_data_Table_6(reg_id);
         list_basic_info = db_manager.get_data_Table_7(reg_id);
-        
-        //list_show_q678.forEach((e) -> System.out.println("Q6 " + e.getDes6() + " Q7 " + e.getDes7() + " Q8 " + e.getDes8()));
+
 
         switch (selected_item) {
             case "Incidents":

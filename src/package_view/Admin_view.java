@@ -51,8 +51,6 @@ public class Admin_view extends javax.swing.JFrame {
         initComponents();
 
         database_manager = new User_DatabaseManager();
-        //database_manager.delet_elements();
-        //database_manager.update_user_status();
         setUpJTableModel();
         panel_status.setVisible(false);
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/package_res/icon.png")).getImage());
